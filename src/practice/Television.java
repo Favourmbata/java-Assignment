@@ -2,65 +2,34 @@ package practice;
 
 
 public class Television {
-  private int channel;
    private int volume;
-    private boolean powerstatus;
+  private  int channel;
+    private boolean powerBotton;
 
-    public boolean TelevisionIsOn() {
-   return powerstatus;
+   public  int changeChannel(){return channel;}
+    public boolean checkPowerBotton() {
+        return powerBotton;
+    }
+
+    public int checkVolume(){return volume;}
+    public void turnOn() {
+  powerBotton = true;
     }
 
 
-    public void TelevisionTurnsOn() {
-        if(powerstatus == false){
-            powerstatus = true;
-        }
+    public void turnOff() {
+        powerBotton = false;
     }
 
-    public void TelevisionTurnsOff() {
-      if(powerstatus == true){
-            powerstatus = false;
-        }
+    public void increseVolume() {
+        volume = volume + 26;
     }
 
-
-
-
-    public void TelevisionSetChannel(int channel) {
-    this.channel = channel;
-   if(channel >= 25){
-       channel = 25;
-   }
-    if(channel < 2){
-        channel = 2;
-    }
-    }
-   public int checkChannel(){
-        return channel;
-   }
-
-    public  int checkVolume(){
-        return volume;
-    }
-    public void TelevisionSetVolume(int volume) {
-    this.volume = volume;
-    if(volume >= 30){
-        volume = 30;
-    }
-   if(volume < 2 ){
-       volume = 2;
-
-        }
+    public void decreaseVolume() {
+        volume -=20;
     }
 
-
-
-    public void TelevisionCanChannelUp() {
-        channel = channel+2;
-        if (channel >= 25){
-            channel = 25;
-        }
-        }
-
-
+    public void channelUp() {
+        channel = channel +70;
+    }
 }

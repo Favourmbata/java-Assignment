@@ -11,7 +11,7 @@ public class CarTest {
 @Test
     public void testThatCarCanBeCreated(){
     Car car =  new Car();
-  //  assertTrue(Car);
+       // assertNotNull(Car);
 
 
 

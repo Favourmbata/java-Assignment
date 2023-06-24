@@ -3,24 +3,15 @@ package chapter2;
 public class TableOfAndCubes {
     public static void main(String[] args) {
 
-    System.out.println("number");
-    System.out.println(0);
-    System.out.println(1);
-    System.out.println(2);
-    System.out.println(3);
-    System.out.println(4);
-    System.out.println(5);
-    System.out.println(6);
-    System.out.println(7);
-    System.out.println(8);
-    System.out.println(9);
-    System.out.println(10);
 
     System.out.println("square");
     System.out.println(0);
-    System.out.println(1);
+    int num1 = 2;
+    int squareNumber = num1 * num1;
+    int cube = squareNumber * num1;
+    System.out.println(cube+"  <----------------");
     System.out.println(2*2);
-    System.out.println(3*3  +" <--");
+    System.out.println(3*3 * 3 +" <--");
     System.out.println(16);
     System.out.println(25);
     System.out.println(36);

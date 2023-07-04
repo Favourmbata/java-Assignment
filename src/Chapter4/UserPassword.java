@@ -18,6 +18,7 @@ public class UserPassword {
       int input = scanner.nextInt();
       return input;
   }
+  String goat = "we";
   public static String inputString(){
       String word = scanner1.next();
       return word;

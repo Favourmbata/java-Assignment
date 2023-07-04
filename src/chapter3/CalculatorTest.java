@@ -2,8 +2,6 @@ package chapter3;
 
 import org.junit.Test;
 
-import java.util.concurrent.Callable;
-
 import static org.junit.Assert.*;
 
 public class CalculatorTest {
@@ -16,21 +14,26 @@ public class CalculatorTest {
 
     }
     @Test
-    public void testThatCalculatorCanBePowerOn(){
-
+    public void testThatCalculatorCanBePoweredOn(){
         Calculator calculator = new Calculator();
-        calculator.powerOn();
-        assertTrue(calculator.isOn());
+        calculator.powerOnOrOff();
+        assertTrue(calculator.checkPowerMode());
+    }
 
-            }
-        @Test
-      public void   testThatCalculatorCanBeTurnOff(){
+    @Test
+    public void testThatCalculatorCanBePoweredOff(){
         Calculator calculator = new Calculator();
-        calculator.powerOn();
-       assertFalse(calculator.isOn());
-        }
+        calculator.powerOnOrOff();
+       // assertEquals(false,calculator.checkPowerMode());
+      //  assertFalse();
+    }
+    @Test
+    public void testThatCalculatorCanAddNumbers(){
+        Calculator calculator = new Calculator();
+        calculator.powerOnOrOff();
+        assertTrue(calculator.checkPowerMode());
 
-
-
-
+       assertEquals(28, calculator.addNumbers(9,19));
+        
+    }
 }

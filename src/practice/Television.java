@@ -32,4 +32,8 @@ public class Television {
     public void channelUp() {
         channel = channel +70;
     }
+
+    public void channelDown() {
+        channel =-35;
+    }
 }

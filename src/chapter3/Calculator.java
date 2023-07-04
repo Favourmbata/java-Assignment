@@ -1,19 +1,27 @@
 package chapter3;
 
 public class Calculator {
+    private boolean powerMode;
+    private int addition;
 
-  private boolean powerStatus;
-    public void powerOn() {
-   powerStatus = true;
+    public boolean checkPowerMode() {
+        return powerMode;
     }
 
-    public boolean isOn() {
-    return powerStatus;
+    public void powerOnOrOff() {
+        if (this.powerMode == false)
+            powerMode = true;
     }
 
-    public void TurnOff(){
-        powerStatus = false;
+    public int addNumbers(int num1, int num2) {
+        return num1 + num2;
     }
+
+
 
 }
+
+
+
+
 

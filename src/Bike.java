@@ -10,8 +10,13 @@ public class Bike {
         this.powerMode = false;
         this.speed = 0;
         this.gear = 1;
+
     }
 
+        public  boolean checkPowerMode(){return powerMode;}
+
+
+        public int checkAcceleration(){return speed;}
     public void turnOnOrTurnOff() {
         if (this.powerMode == false) {
             this.powerMode = true;
@@ -79,6 +84,9 @@ public class Bike {
         }
 
     }
+
+
+    public int checkDecceleration() {return gear;}
 
 
 }

@@ -1,8 +1,11 @@
 package practice;
 
+import Chapter4.UserPassword;
+
 public class MultiArray {
 
     public static void main(String[] args) {
+
 
         int[][] doubleArray = new int[3][8];
 

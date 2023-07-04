@@ -46,8 +46,13 @@ public class TelevisionTest {
 
 @Test
     public void testThatTelevesionCanChannelDown(){
+    Television television = new Television();
+    television.turnOn();
+    television.channelUp();
+    television.channelDown();
+    assertEquals(0,television.checkVolume());
 
-}
+    }
 
 
     }

@@ -1,38 +1,35 @@
 package Chapter4;
 
 import java.util.Scanner;
+//
+//public class LargestAndSmallestNUmber {
+////
+//
+//    public static void main(String[] args) {
+//
+//        Scanner scanner = new Scanner(System.in);
+//        int count = scanner.nextInt();
+//        int largestNumber = Integer.MAX_VALUE;
+//        int smallestNumber = Integer.MIN_VALUE;
+//
+//        while (true)
+//            System.out.println("Enter a number or -1 to break");
+//           if (scanner.hasNextInt()) {
+//               int number = scanner.nextInt();
+//
+//               if (number > largestNumber) {
+//                   largestNumber = number;
+//               }
+//               if (number < smallestNumber) {
+//                   smallestNumber = number;
+//               }
+//           }else {
+//               System.out.println("Enter a valid number");
+//           }
+//        System.out.println("largest number entered is " + largestNumber);
+//        System.out.println("smallest number is " + smallestNumber);
+//
+//    }
+//
+//    }
 
-public class LargestAndSmallestNUmber {
-
-
-public void largestAndSmallestNumber(){
-
-    Scanner scanner = new Scanner(System.in);
-     int number = 0;
-     int largestNumber = 0;
-     int smallestNumber = 0;
-
-     while (number != -1){
-         System.out.println("Enter a number or -1 to end");
-       number = scanner.nextInt();
-       if(number == -1){
-           break;
-       }
- if (number > largestNumber){
-     largestNumber = number;
- }
-   else {
-       if (number < largestNumber){
-           smallestNumber = smallestNumber;
-       }
- }
-
-
-
-
-     }
-
-}
-
-
-}

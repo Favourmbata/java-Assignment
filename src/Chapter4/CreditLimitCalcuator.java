@@ -55,7 +55,7 @@ public class CreditLimitCalcuator {
        }
 
        if(newBalance < 0){
-           System.out.println("You are broke, you no get shi shi for hand go get money and come back later");
+           System.out.println("You are broke, try again  later");
        }
        return  newBalance;
    }

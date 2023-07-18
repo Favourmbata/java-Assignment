@@ -6,7 +6,7 @@ public class Exercise {
 
         int counter = 1;
 
-        while (counter < 10 ){
+        while (counter < 11 ){
          System.out.println(counter);
         counter++;
         }

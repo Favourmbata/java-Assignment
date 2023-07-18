@@ -1,4 +1,4 @@
-package Chapter5.Practice;
+package Chapter5;
 
 public class ReverseNumber {
 

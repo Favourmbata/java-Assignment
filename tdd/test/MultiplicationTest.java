@@ -1,7 +1,6 @@
 package test;
 
-import Multiplication.Multiplication;
-import org.junit.Assert;
+import Chapter5.Multiplication;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,5 +1,3 @@
-package SalesCommissionCalculator.test;
-
 import SalesCommissionCalculator.src.SalesCommissionCalculator;
 import org.junit.jupiter.api.Test;
 

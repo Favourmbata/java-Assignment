@@ -1,5 +1,10 @@
 package ENUM;
 
-public enum GeoPoliticalZone {
+public enum Day  {
+
+ SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURDAY,FRIDAY,SATURDAY
 
 }
+
+
+

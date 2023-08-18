@@ -13,8 +13,24 @@ private double average;
            this.average = average;
        }
    }
+
     }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setAverage(double average){
+        this.average = average;
+
+    }
+    public double studentAverage(){
+        return average;
+    }
+
+    public String getName() {
+        return name;
+    }
     public double getAverage() {
         return average;
     }
@@ -40,21 +56,6 @@ public String getLetterGrade(){
         return letterGrade;
     }
 
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setAverage(double average){
-        this.average = average;
-
-        }
-    public double studentAverage(){
-        return average;
-    }
-
-    public String getName() {
-        return name;
-    }
 
     public StudentNestedIf(){}
 

@@ -16,15 +16,19 @@ public class EnforcingPrivacyWithCrytography {
 
     public static void main(String[] args) {
         int number = 1234;
-       int firstDigit = number/1000;
-       int secondDigit = number/100%10;
-       int thirdDigit = (number/10)%100%10;
-       int fourthDigit = number%10;
 
-       int firstPlus7 = firstDigit + 7;
-       int secondPlus7 = secondDigit + 7;
-       int thirdPlus7 = thirdDigit + 7;
-       int fourthPlus7 = fourthDigit + 7;
+        int firstDigit = number/1000;
+        int secondDigit = number/100%10;
+        int thirdDigit = (number/10)%100%10;
+        int fourthDigit = number%10;
+
+        int first = firstDigit + 7;
+       int second = secondDigit + 7;
+       int third = thirdDigit + 7;
+       int fourth = fourthDigit + 7;
+
+      firstDigit = thirdDigit;
+      secondDigit = fourthDigit;
 
     }
 

@@ -6,7 +6,10 @@ public class SeparatingDigitsInInteger {
 
   public static void spaceNumber(){
 
-      int number = 42339;
+      Scanner scanner = new Scanner(System.in);
+
+      System.out.println("enter five number");
+      int number = scanner.nextInt();
 
       int frstNumber = number/10000;
 

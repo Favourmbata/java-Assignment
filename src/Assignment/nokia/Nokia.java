@@ -2,7 +2,7 @@ package Assignment.nokia;
 
 import java.util.Scanner;
 
-public class Nokia {
+public class  Nokia {
     public static void main(String[] args) {
       Nokia nokia = new Nokia();
 

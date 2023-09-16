@@ -2,14 +2,17 @@ package Amigoscode;
 
 import java.util.Scanner;
 
-public class Jonathan2 {
+public class WeekDay {
     public static void calculatingWeek() {
 
-
         Scanner input = new Scanner(System.in);
-
         System.out.println("Enter day of the week choose 0 to 6");
         int weekDay = input.nextInt();
+
+        while (weekDay > 6){
+            System.out.println("Enter day of the week  choose 0 to 6");
+            weekDay = input.nextInt();
+        }
         switch (weekDay) {
             case 0:
                 System.out.println("Today is Sunday");
@@ -33,12 +36,12 @@ public class Jonathan2 {
                 System.out.println("Today is saturday");
                 break;
             default:
-                calculatingWeek();
+//                calculatingWeek();
 
         }
     }
 
     public static void main(String[] args) {
-   calculatingWeek();
+        calculatingWeek();
     }
 }

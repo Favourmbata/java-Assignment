@@ -6,7 +6,7 @@ public class TaxCalculator {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("please number of citizen ->");
+        System.out.println("please enter number of citizen ->");
         int numberOfCitizen  = scanner.nextInt();
 
         String []nameOfCitizens = new String[numberOfCitizen];
@@ -34,6 +34,7 @@ public class TaxCalculator {
 
         for (int i = 0; i < numberOfCitizen; i++) {
             System.out.println("The TAX of citizen" + (i+1)+ " is " + tax[i]);
+
         }
 
 }

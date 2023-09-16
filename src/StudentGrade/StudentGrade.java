@@ -6,13 +6,14 @@ public class StudentGrade {
 
 
     Scanner input = new Scanner(System.in);
-      public void print(String word){
-          System.out.println(word);
-      }
 
-     public   void  studentRecord(){
+    public void print(String word) {
+        System.out.println(word);
+    }
 
-int grade = 0;
+    public void studentRecord() {
+
+        int grade = 0;
 
 
         print("How many Student do you have");
@@ -21,31 +22,33 @@ int grade = 0;
         print("How many subject do they offer");
         String subject = input.next();
         int numberOfSubjects = Integer.parseInt(subject);
+        System.out.println("saving>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("saved successfully");
+
+        int[][] students = new int[numberOfStudent][numberOfSubjects];
+        int[] studentTotalScore = new int[students.length];
+        int[] studentsAverageScore = new int[students.length];
+        for (int student = 0; student < students.length; student++) {
+            for (int subjects = 0; subjects < students[student].length; subjects++) {
+                while (true) {
+                    int nextStudent = student + 1;
+                    int nextSubject = subjects + 1;
+                    print("entering  score for student => " + nextStudent +
+                            " \n enter  subject score => " + nextSubject);
+
+                    grade = input.nextInt();
 
 
-    int [][] students = new int  [numberOfStudent][numberOfSubjects];
-         int [] studentTotalScore = new int [students.length];
-         int [] studentsAverageScore = new  int[students.length];
-         for (int student = 0; student < students.length ; student++) {
-             for (int subjects = 0; subjects  < students[student].length ; subjects++) {
-                    while (true) {
-                        int nextStudent = student+1;
-                        int nextSubjectt = subjects+1;
-                        print("entering  score for student => " + nextStudent +
-                                " \n enter  subject score => " + nextSubjectt);
-
-                        grade = input.nextInt();
-
-
-                        if (grade < 0 || grade > 100) continue;
-                        break;
-                    }
-                     print("saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-                     print("saved sucessful");
+                    if (grade < 0 || grade > 100) continue;
+                    break;
+                }
+                print("saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                print("saved sucessful");
                 students[student][subjects] = grade;
 
-                 }
-         }
+            }
+
+        }
 
             int sum = 0;
          int score = 0;
@@ -79,22 +82,15 @@ int grade = 0;
 
              }
 
-    public static void main(String[] args) {
+        public static void main (String[]args){
 
 
-          StudentGrade goat = new StudentGrade();
+            StudentGrade goat = new StudentGrade();
 
-          goat.studentRecord();
+            goat.studentRecord();
+
+        }
+
 
     }
-
-
-     }
-
-
-
-
-
-
-
-
+//

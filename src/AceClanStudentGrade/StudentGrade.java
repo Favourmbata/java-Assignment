@@ -1,2 +1,5 @@
-package AceClanStudentGrade;public class StudentGrade {
+package AceClanStudentGrade;
+
+public class StudentGrade {
+
 }

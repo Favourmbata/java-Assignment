@@ -2,7 +2,7 @@ package Chibuzor;
 
 import java.util.Scanner;
 
-public class Factorial {
+public class Factor {
 
 
     public static void main(String[] args) {

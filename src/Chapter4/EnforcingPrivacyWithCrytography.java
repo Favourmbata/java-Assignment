@@ -15,20 +15,37 @@ public class EnforcingPrivacyWithCrytography {
 //    }
 
     public static void main(String[] args) {
-        int number = 1234;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println(" enter four didits");
+        int number = input.nextInt();
 
         int firstDigit = number/1000;
-        int secondDigit = number/100%10;
-        int thirdDigit = (number/10)%100%10;
-        int fourthDigit = number%10;
+        int secondDigit = number/100;
+        int thirdDigit = number/10;
+        int fourthDigit = number/1;
 
-        int first = firstDigit + 7;
-       int second = secondDigit + 7;
-       int third = thirdDigit + 7;
-       int fourth = fourthDigit + 7;
+        int digit1 = (firstDigit + 7)%10;
+       int digit2 = (secondDigit + 7)%10;
+       int digit3 = (thirdDigit + 7)%10;
+       int digit4 = (fourthDigit + 7)%10;
 
-      firstDigit = thirdDigit;
-      secondDigit = fourthDigit;
+      int encrypt = firstDigit;
+       firstDigit = thirdDigit;
+       secondDigit = fourthDigit;
+
+       int encrypti = secondDigit;
+       secondDigit = fourthDigit;
+       fourthDigit = encrypti;
+
+
+
+       int total = firstDigit + secondDigit + thirdDigit +fourthDigit;
+
+
+
+
+        System.out.println("The encryted value is-> " + total);
 
     }
 

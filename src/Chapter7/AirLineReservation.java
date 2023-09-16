@@ -7,10 +7,8 @@ public class AirLineReservation {
     Scanner scanner = new Scanner(System.in);
 
     boolean [] seatChart = new boolean[10];
-    public void seatReservation(){
+    public void seatReservation(int seatArragement){
 
-        int seatArragement = scanner.nextInt();
-        System.out.println("Please type 1 for first class and 2 for Economy");
 
         if (seatArragement == 1){
             assignFirstClassSeat();
@@ -30,11 +28,7 @@ public class AirLineReservation {
              System.out.println("your seat number is 1"+i);
              return;
          }
-     }
-     System.out.println("would you like to be place in the in the economy section yes/no");
-       String response = scanner.next();
-     if (response == "yes"){
-         System.out.println();
+         System.out.println("The first class section is full");
      }
     }
 
@@ -49,9 +43,28 @@ public void assignEconomySeat(){
     System.out.println("The economy section is full:");
     }
 
+     public void nextFlightBoking(){
+         System.out.println("would you like to be place in the in the first class section yes/no->");
+         String response = scanner.next();
+         if (response.equalsIgnoreCase("yes")){
+             System.out.println("you have sucessfully booked a first class->");
+         }if (response.equalsIgnoreCase("No")){
+             System.out.println("The next flight leaves in three hours->");
+         }
+
+
+    }
+
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         AirLineReservation airLineReservation = new AirLineReservation();
-      airLineReservation.seatReservation();
+
+
+
+
+        System.out.println("Please type 1 for first class and 2 for Economy");
+        int seatArragement = scanner.nextInt();
+       airLineReservation.seatReservation(seatArragement);
 
     }
     }

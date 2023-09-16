@@ -1,9 +1,9 @@
-//package Chapter4;
-//
-//import java.util.Scanner;
-//
+package Chapter4;
+
+import java.util.Scanner;
+
 //public class LargestAndSmallestNUmber {
-////
+//
 //
 //    public static void main(String[] args) {
 //
@@ -32,4 +32,4 @@
 //    }
 //
 //    }
-////
+//

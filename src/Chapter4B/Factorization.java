@@ -22,4 +22,12 @@ public class Factorization {
     return String.format("%.3f", result);
      }
 
+
+    public int exponentialOfFactorial(int exponential) {
+     int sum = 1;
+        for (int i = exponential - 1 ; i > 0 ; i--) {
+            sum = 1 + exponential * sum / i;
+        }
+      return sum;
+    }
 }

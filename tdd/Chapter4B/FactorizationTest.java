@@ -10,7 +10,7 @@ class FactorizationTest {
     public void testForFiveFactorial() {
         Factorization factorization = new Factorization();
 
-        int number = factorization.favouration(0);
+        int number = factorization.favouration(4);
         assertEquals(24, number);
 
     }
@@ -23,4 +23,15 @@ class FactorizationTest {
 
 
     }
+
+   @Test
+    public void testThatcalculateExponentialOfFactorial(){
+        Factorization factorization = new Factorization();
+        int total = factorization.exponentialOfFactorial(5);
+        assertEquals(56,total);
+
+    }
+
+
+
 }

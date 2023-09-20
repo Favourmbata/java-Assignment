@@ -18,12 +18,12 @@ public class Factor {
                factor++;
 
 
-                System.out.printf("%d ",i);
+//                System.out.printf("%d ",i);
 
             }
         }
 
-//            System.out.println(factor);
+            System.out.println(factor);
     }
 }
 

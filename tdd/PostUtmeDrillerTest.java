@@ -21,7 +21,7 @@ public class PostUtmeDrillerTest {
     }
     @Test
     public void testCalculateUtmeCopiesBetweentOneTofour(){
-        int price1 =   postUtmeDriller.getPriceOfUtmeCopies(2);
+        int price1 =   postUtmeDriller.getPriceOfUtmeCopies(3);
         assertEquals(2000,price1);
     }
 

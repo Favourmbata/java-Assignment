@@ -10,8 +10,8 @@ class FactorizationTest {
     public void testForFiveFactorial() {
         Factorization factorization = new Factorization();
 
-        int number = factorization.favouration(4);
-        assertEquals(24, number);
+        int number = factorization.favouration(5);
+        assertEquals(120, number);
 
     }
 
@@ -31,6 +31,7 @@ class FactorizationTest {
         assertEquals(56,total);
 
     }
+
 
 
 

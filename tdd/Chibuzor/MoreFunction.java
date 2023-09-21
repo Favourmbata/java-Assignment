@@ -1,6 +1,6 @@
 package Chibuzor;
 
-public class Function {
+public class MoreFunction {
 
     public boolean isEvenNumber(int number) {
         if (number % 2 == 0) {

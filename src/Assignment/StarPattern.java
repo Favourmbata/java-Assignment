@@ -20,7 +20,7 @@ public class StarPattern {
         }
 
 
-        System.out.println();
+
 
 
 

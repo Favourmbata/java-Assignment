@@ -21,4 +21,6 @@ public class SumDigits {
 
         System.out.println("The sum is " + calculateSumOfDigit (numbers));
     }
+
+
 }

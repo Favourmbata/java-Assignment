@@ -8,9 +8,11 @@ public class ValidNumbers {
         Scanner scanner = new Scanner(System.in);
         int total = 0;
         System.out.println("enter 10 scores");
-        for (int numberIndex = 1; numberIndex <=10 ; numberIndex++) {
-            System.out.println("score" + numberIndex + " :" );
-         total +=numberIndex;
+        int score = scanner.nextInt();
+
+        for (int numberIndex = 0; numberIndex <=10 ; numberIndex++) {
+            System.out.println("score" + score + " :" );
+         total +=score;
         }
 
         System.out.print("total score:" + total);

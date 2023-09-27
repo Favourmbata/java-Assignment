@@ -3,7 +3,7 @@ package ArrayTask;
 public class CumulativeArr {
     public static void findPair(int[] myArr, int target) {
 
-        for (int i = 0; i < myArr.length -1 ; i++) {
+        for (int i = 0; i < myArr.length  ; i++) {
             for (int j = 0; j < myArr.length; j++) {
                 if(myArr[i] + myArr[j] == target){
                     System.out.printf("pair found (%d %d)",myArr[i],myArr[j]);

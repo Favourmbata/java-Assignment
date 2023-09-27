@@ -1,4 +1,4 @@
-package Chapter8;
+package inheritance;
 
 public class Time {
     private int hour;

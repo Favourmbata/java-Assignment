@@ -1,4 +1,4 @@
-package Chapter6;
+package tdd;
 
 public class Bike {
     private String name;

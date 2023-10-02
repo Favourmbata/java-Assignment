@@ -1,9 +1,5 @@
 package Chapter7;
 
-import ArrayAssigment.Arraylist;
-
-import java.util.List;
-
 public enum GeoPoliticalZone {
     NORTH_CENTRAL,
     NORTH_EAST,

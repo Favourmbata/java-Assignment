@@ -1,4 +1,4 @@
-package ArrayAssigment;
+package ArrayPractice;
 
 public class SevenSegmentArray {
 

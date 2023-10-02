@@ -1,4 +1,6 @@
-package Chapter6;
+package tdd;
+
+import tdd.Bike;
 
 import java.util.Scanner;
 

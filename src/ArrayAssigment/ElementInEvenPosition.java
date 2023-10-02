@@ -12,8 +12,6 @@ public class ElementInEvenPosition {
             }
         }
 
-
-
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
-package Jennifer;
+package tdd;
 
+import Jennifer.School;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;

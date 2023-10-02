@@ -10,7 +10,6 @@ public class ElementOddPosistion {
             }
         }
 
-
     }
 
     public static void main(String[] args) {

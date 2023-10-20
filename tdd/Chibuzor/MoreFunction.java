@@ -1,5 +1,4 @@
 package Chibuzor;
-
 public class MoreFunction {
 
     public boolean isEvenNumber(int number) {
@@ -51,12 +50,34 @@ public class MoreFunction {
         if (number != 0) {
             reverse = reverse * 10 + number % 10;
             number = number / 10;
-                return true;
-            } else {
-                return false;
-            }
-
+            return true;
+        } else {
+            return false;
         }
 
     }
 
+    public int[] Swap(int[] numbers) {
+        int temp = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (i < numbers.length - 3) {
+                temp = numbers[i];
+                numbers[i] = numbers[i + 2];
+                numbers[i + 2] = temp;
+            }
+
+        }
+        return numbers;
+    }
+
+
+    public int[] getSwappedPosition(int[] numbers,int index1,int index2) {
+
+        numbers[index1] = numbers[index1] + numbers[index2];
+        numbers[index2] = numbers[index1] - numbers[index2];
+        numbers[index1] = numbers[index1] - numbers[index2];
+        return numbers;
+    }
+
+
+}

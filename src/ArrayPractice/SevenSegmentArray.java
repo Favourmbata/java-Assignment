@@ -52,7 +52,7 @@ public class SevenSegmentArray {
 
 
     public static void main(String[] args) {
-  display("11110011");
+  display("11111111");
     }
 
     }

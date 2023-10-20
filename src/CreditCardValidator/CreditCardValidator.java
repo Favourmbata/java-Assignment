@@ -30,24 +30,27 @@ public class CreditCardValidator {
         sumEvenAndOdd = evenTotal + oddTotal;
         if (sumEvenAndOdd % 10 == 0) {
             validType = "Valid Card";
-        } else {
+        } else if (sumEvenAndOdd % 10 !=0){
             validType = "Invalid Card";
         }
         if (creditCard.charAt(0) == '4') {
             cardType = "Visa Card";
+
         } else if (creditCard.charAt(0) == '5') {
-            cardType = "Master Card";
-        } else if (creditCard.charAt(0) == '3' && creditCard.charAt(1) == '7') {
-            cardType = "American Express Cards";
-        } else if (creditCard.charAt(0) == '6') {
+            cardType =  "Master Card";
+        }
+         else if (creditCard.charAt(0) == '3' && creditCard.charAt(0) == '7') {
             cardType = "Discover Cards";
-        } else cardType = "Your  card does not exit";
-            System.out.println("Card Type Is " + cardType + "\n" +
-                    "Card Number Is " + creditCard + "\n" +
-                    "Card Digit Length " + length + "\n" +
-                    "Card Vadilidty Status Is " + validType);}
-        else System.out.println("Invalid Card Length");
-    }
+        }else cardType = "Invalid Card";
+            System.out.println("**********************************"+"\n"+
+                    "**Card Type Is:" + cardType + "\n" +
+                    "**Card Number Is:" + creditCard + "\n" +
+                    "**Card Digit Length:" + length + "\n" +
+                    "**Card Vadilidty Status : " + validType+"\n"+
+                    "*************************************************");}
+//         System.out.println("please put a valid card");
+
+            }
     public static void main(String[] args) {
         creditCardValidator();
     }

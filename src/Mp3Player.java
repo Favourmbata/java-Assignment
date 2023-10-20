@@ -13,7 +13,9 @@ public class Mp3Player{
     }
 
 
-   public  boolean checkPlaySong(){return playSong;}
+   public  boolean checkPlaySong()
+   {
+       return playSong;}
     public boolean checkPowerMode(){
         return powermode;
     }

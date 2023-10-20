@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AirConditionTest {
 
      @Test
-    public void testThatAirConditionIfIsOn(){
+    public void testThatAirConditionIsOn(){
         AirCondition airCondition = new AirCondition();
         airCondition.turnOn();
          assertTrue(airCondition.checkPowerStatus());

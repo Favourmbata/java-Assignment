@@ -8,6 +8,7 @@ public class ShoppingMall {
     Scanner input1 = new Scanner(System.in);
     Scanner input2 = new Scanner(System.in);
     double discount = 0;
+    double productPrice = 0;
     String cashierName = "";
     public void shoppingMail(){
        Customer customer = new Customer();
@@ -22,9 +23,15 @@ public class ShoppingMall {
 
            System.out.println("How many pieces?");
            int productQuantity = input1.nextInt();
+try{
+    System.out.println("How much per unit");
+    productPrice = input1.nextDouble();
 
-           System.out.println("How much per unit");
-           double productPrice = input1.nextDouble();
+}catch (Exception e){
+    System.out.println("How much per unit");
+     productPrice  = input1.nextDouble();
+
+}
 
               Product boughtProduct = buyNewProduct(productName, productPrice, productQuantity);
               customer.listOfProduct.add(boughtProduct);
@@ -33,7 +40,7 @@ public class ShoppingMall {
                       Do you want to add more
                       press -> any thing to continue
                       press -> 2 to exist
-                      
+
                       """);
 
                  String addMore = input2.next();
@@ -77,7 +84,8 @@ public class ShoppingMall {
         =============================================================
        ITEM            QTY          PRICE           TOTAL(NGN)
        -------------------------------------------------------------
-   """);
+
+     """);
       if (customer.listOfProduct.size() > 0){
           for (int i = 0; i < customer.listOfProduct.size(); i++) {
               for (int j = 0; j < customer.listOfProduct.size(); j++) {
@@ -96,17 +104,17 @@ System.out.println("     "+customer.listOfProduct.
           }
           System.out.printf("""
                   ---------------------------------------------------------------------
-                                               subTotal: %f     
-                                               Discount:  %f 
+                                               subTotal: %f
+                                               Discount:  %f
                                               Vat @ 17.50: 927.50
                   ======================================================================
                                              BillTotal: %f
                   ======================================================================
                   This is not a receipt kindly pay:
                   ======================================================================
-                                                
-                  
-                  
+
+
+
                   """,subTotal, discount,billTotal);
       }
 
@@ -140,19 +148,19 @@ System.out.println("     "+customer.listOfProduct.
    ITEM            QTY          PRICE           TOTAL(NGN)
    -----------------------------------------------------------------
     %s                %d            %f              %f
-   
-               
-             
-   ------------------------------------------------------------------- 
-                                      sub Total:   %f 
+
+
+
+   -------------------------------------------------------------------
+                                      sub Total:   %f
                                       Discount:    %f
                                    VAT @ 17.50:    927.50
    ===================================================================
-                                    Bill Total:   %f  
+                                    Bill Total:   %f
                                    Amount paid:   %f
-                                       Balance:   %f             
-   ===================================================================   
-   THANKS  FOR SHOPPING WITH US                                          
+                                       Balance:   %f
+   ===================================================================
+   THANKS  FOR SHOPPING WITH US
                 """,cashierName,customer.getName(),customer.listOfProduct.get(i).getProductName(),
                         customer.listOfProduct.get(i).getProductQuantity(),
                         customer.listOfProduct.get(i).getProductPrice(),

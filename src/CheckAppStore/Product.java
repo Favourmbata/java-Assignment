@@ -40,7 +40,7 @@ public class Product {
 
     public String toString(){
         return String.format("""
-              
+
                 product name:   %s
                 product quantity: %d
                 product price: %f

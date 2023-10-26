@@ -1,20 +1,31 @@
 package chapter3;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Anagram {
 
-        public boolean compare (String character1, String character2) {
-//          if (character1.length()!=character2.length()&& character2.length()!= character1.length())return false;
-          if (character1.equals(character2)&& character2.equals(character1))return true;
-         return false;
-        }
+    public boolean compare (String character1, String character2) {
+            char []a = character1.toCharArray();
+            char []b = character2.toCharArray();
+             Arrays.sort(a);
+             Arrays.sort(b);
+             Boolean result = Arrays.equals(a,b);
+          if (result == true)return true;
+        return false;
+    }
 
-    public boolean isPalindrome(String word) {
+
+        public boolean isPalindrome(String word) {
           String character = "";
-            for (int i = word.length()-1; i > 0 ; i--) {
-//             word.charAt(i) ;
-        }
-                return true;
-
+          String rev = "";
+          char save;
+            for (int i = 0; i <character.length() ; i++) {
+                save = character.charAt(i);
+                rev = save  + rev ;
+            }
+                if (character.toLowerCase().equals(rev))return true;
+         return false;
         }
 
 

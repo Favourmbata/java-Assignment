@@ -1,2 +1,2 @@
-package MyOwn;public class Map {
-}
+package MyOwn;
+

@@ -9,8 +9,8 @@ public class AnagramTest {
     @Test
     public void testThatComparesString(){
         Anagram anagram = new Anagram();
-       String character2 = "1100";
-       String character1 = "1011";
+       String character2 = "1001";
+       String character1 = "1001";
        boolean result = anagram .compare(character1,character2);
 
         assertTrue(result);
@@ -21,7 +21,7 @@ public class AnagramTest {
    @Test
     public void testThatIsPalindrome(){
         Anagram anagram = new Anagram();
-        String word = "madamm";
+        String word = "madaw";
         assertEquals(true,anagram.isPalindrome(word));
     }
 

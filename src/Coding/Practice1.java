@@ -51,7 +51,7 @@ public class Practice1 {
                     System.out.println("Biko input a valid number");}
             count =0;
         }
-        return null;
+         return null;
     }
 
     public void displayTable(int[][] array, String numberOfItemsBougth) {

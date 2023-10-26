@@ -1,4 +1,7 @@
 package Chibuzor;
+
+import org.junit.Test;
+
 public class MoreFunction {
 
     public boolean isEvenNumber(int number) {
@@ -71,13 +74,12 @@ public class MoreFunction {
     }
 
 
-    public int[] getSwappedPosition(int[] numbers,int index1,int index2) {
+    public int[] getSwappedPosition(int[] numbers, int index1, int index2) {
 
         numbers[index1] = numbers[index1] + numbers[index2];
         numbers[index2] = numbers[index1] - numbers[index2];
         numbers[index1] = numbers[index1] - numbers[index2];
         return numbers;
     }
-
 
 }

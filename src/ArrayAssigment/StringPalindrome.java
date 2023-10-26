@@ -7,7 +7,8 @@ public class StringPalindrome {
      public static void stringPalindrome(){
          System.out.println("Enter a String");
           String word = scanner.next();
-         for (int i = word.length()-1; i >= 0 ; i--) {
+
+          for (int i = word.length()-1; i >= 0 ; i--) {
              System.out.print(" " +word.charAt(i));
          }
 

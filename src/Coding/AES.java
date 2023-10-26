@@ -1,14 +1,12 @@
 package Coding;
 
 import javax.crypto.Cipher;
-import javax.crypto.CipherSpi;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.GCMParameterSpec;
-import java.security.Key;
 import java.util.Base64;
 
-public class Encode {
+public class AES {
 
 
     private SecretKey key;
@@ -18,7 +16,7 @@ public class Encode {
 
 
     public void init() throws Exception {
-        KeyGenerator generator =  KeyGenerator.getInstance("Encode");
+        KeyGenerator generator =  KeyGenerator.getInstance("AES");
         generator.init(kEY_SIZE);
         key = generator.generateKey();
 
@@ -26,41 +24,43 @@ public class Encode {
 
     public String encrypt(String message) throws Exception{
         byte[] messageInBytes = message.getBytes();
-        Cipher encryptionCipher = Cipher.getInstance("AES/GCM/Nodding");
+        Cipher encryptionCipher = Cipher.getInstance("AES/GCM/NoPadding");
         encryptionCipher.init(Cipher.ENCRYPT_MODE,key);
         byte[] encryptByte = encryptionCipher.doFinal(messageInBytes);
-        return encoding(encryptByte);
+        return encode(encryptByte);
 
     }
 
     public String decrypt(String encryptedMessage)throws Exception{
-     byte[]messageInBytes = decoding(encryptedMessage);
-     Cipher decryptionCipher = Cipher.getInstance("AES/GCM/Nodding");
+     byte[]messageInBytes = decode(encryptedMessage);
+     Cipher ecryptionCipher = Cipher.getInstance("AES/GCM/NoPadding");
         GCMParameterSpec spec = new GCMParameterSpec(T_LEN,encryptionCipher.getIV());
-     decryptionCipher.init(Cipher.DECRYPT_MODE,key,spec);
-       byte []decryptBytes  = decryptionCipher.doFinal(messageInBytes);
+     ecryptionCipher.init(Cipher.DECRYPT_MODE,key,spec);
+       byte []decryptBytes  = ecryptionCipher.doFinal(messageInBytes);
        return new String(decryptBytes);
     }
 
-    private String encoding(byte[] data) {
+    private String encode(byte[] data) {
         return Base64.getEncoder().encodeToString(data);
     }
 
 
-    private byte[] decoding(String data) {
+    private byte[] decode(String data) {
         return Base64.getDecoder().decode(data);
     }
 
     public static void main(String[] args) {
         try {
-            Encode encode = new Encode();
-            encode.init();
-            String encryptedMessage = encode.encrypt("Hello World!");
-            String decrytedMessage = encode.decrypt(encryptedMessage);
+            AES aes = new AES();
+           aes .init();
+            String encryptedMessage = aes.encrypt("Hello World!");
+            String decrytedMessage = aes.decrypt(encryptedMessage);
 
-            System.out.println("Encrypted Message = " + encryptedMessage);
-            System.out.println("Decryted Message = " + decrytedMessage);
-        }catch (Exception ignored){}
+            System.err.println("Encrypted Message = " + encryptedMessage);
+            System.err.println("Decryted Message = " + decrytedMessage);
+        }catch (Exception ignored){
+
+        }
     }
 
 

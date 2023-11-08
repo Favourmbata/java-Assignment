@@ -1,6 +1,6 @@
 package Estore;
 
-public class Users {
+public class User {
 
     private String age;
     private String emailAdress;

@@ -1,6 +1,6 @@
 package Estore;
 
-public class Customers {
+public class Customer {
     private String billingInformation;
     private String shoppingCart;
 

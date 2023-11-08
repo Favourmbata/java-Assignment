@@ -18,15 +18,13 @@ public class Person {
     }
 
 
-
-   public void add(Problem problems){
-      problem.add(problems);
-   }
-   public  void solve(Problem problems){
-       problems.setSolved(true);
-   }
-
-    public String tellProblems() {
-      return tellProblems
+    public void add(Problem problems) {
+        problem.add(problems);
     }
+
+    public void solve(Problem problems) {
+        problems.setSolved(true);
+    }
+
+
 }

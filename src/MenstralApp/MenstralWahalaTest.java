@@ -10,11 +10,12 @@ public class MenstralWahalaTest {
 
       @BeforeEach
     public void setUp(){
-          menstralWahala = new MenstralWahala("2023-01-11",20,6);
+          menstralWahala = new MenstralWahala("2023-03-03",26,4);
       }
-//      @Test
-//    public void testThatPatientCangetOvulationPeriod(){
-//          String ovulationDate = menstralWahala.get
-//      }
+      @Test
+    public void testThatPatientCangetOvulationPeriod(){
+          String ovulationDate = menstralWahala.getOvulationDay();
+          assertEquals("2023-03-18",ovulationDate);
+      }
 }
    

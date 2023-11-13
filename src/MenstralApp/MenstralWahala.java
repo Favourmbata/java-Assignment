@@ -30,7 +30,7 @@ public class MenstralWahala {
         return addDaysToDate(getOvulationDay(),2);
     }
     public String getdateForNextPeriod(){
-        int lentgthOfCycle = getCycleLength() + getFlowDays;
+        int lentgthOfCycle = getCycleLength();
         return getdateForNextPeriod();
     }
 

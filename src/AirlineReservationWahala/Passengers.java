@@ -11,7 +11,16 @@ public class Passengers {
        if (classNumber == 2)classType = ECONOMYTYPE;
    }
 
-    public void assignFirstClassSeats(boolean[] seat) {
+
+
+   public void bookFlight(AirlineReservation airlineReservation){
+       seatNumber = -1;
+       var seats = airlineReservation.getSeatsChart();
+       assignFirstClassSeats(seats);
+       assignEconomyClassSeat(seats);
+   }
+
+   public void assignFirstClassSeats(boolean[] seat) {
         if (classType == FIRSTCLASSTYPE) {
             for (int i = 1; i <= 5; i++) {
             if (!seat[i]){
@@ -25,7 +34,7 @@ public class Passengers {
 
   public void assignEconomyClassSeat(boolean[]seat){
        if (classType == ECONOMYTYPE){
-           for (int i = 6; i <= 10 ; i++) {
+           for (int i = 5; i <= 10 ; i++) {
                if (!seat[i]){
                    seatNumber = i + 1;
                    seat[i] = true;
@@ -40,4 +49,8 @@ public class Passengers {
    public ClassType getClassType(){
        return classType;
    }
+
+    public void passengerPass(){
+        System.out.println("class type is:\nyour seat number is: "+ classType + seatNumber);
+    }
 }

@@ -45,8 +45,8 @@ public enum GeoPoliticalZone {
             GeoPoliticalZone result = checkState(state);
             if (result != null) {
                 System.out.println(result.name());
-//            } else {
-//                System.out.println("State not found");
+            } else {
+                System.out.println("State not found");
             }
         }
     }

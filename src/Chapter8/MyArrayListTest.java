@@ -36,7 +36,7 @@ public class MyArrayListTest {
       strings.add("G_string");
       strings.add("D_string");
       strings.add("E_string");
-      assertEquals(3,strings.getsize());
+            assertEquals(3,strings.getsize());
 
   }
 
@@ -49,6 +49,7 @@ public class MyArrayListTest {
       strings.add("lucky");
       strings.remove("favour");
       assertEquals(2,strings.getsize());
+
   }
    @Test
     public void addFourElement_getElement_ClearAllInTest(){

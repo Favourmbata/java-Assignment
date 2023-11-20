@@ -119,16 +119,30 @@ public class ImplementArrayListTest {
 
 
    @Test
-    public void testThatArrayList_SetElement(){
+    public void testThatArrayList_SetElement() {
        ImplementArrayList numbers = new ImplementArrayList();
        assertTrue(numbers.isEmpty());
        numbers.add(7);
        numbers.add(3);
        numbers.add(4);
        numbers.add(1);
-       numbers.setElement(3,25);
+       numbers.setElement(3, 25);
+       assertEquals(7,numbers.getSize());
+       assertEquals(3,numbers.getSize());
+       assertEquals(4,numbers.getSize());
+       assertEquals(1,numbers.getSize());
+       assertEquals(25,numbers.getSize());
 
    }
 
+    @Test
+    public void testThatArraylist_GetElementPosition(){
+        ImplementArrayList numbers = new ImplementArrayList();
+        assertTrue(numbers.isEmpty());
+        numbers.add(7);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(1);
+    }
 
 }

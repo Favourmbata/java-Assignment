@@ -74,7 +74,8 @@ public class ImplementArrayList {
             }
         }
             this.numberOfElement = num;
-        }
+
+    }
 
 }
 

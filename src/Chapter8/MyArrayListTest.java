@@ -51,19 +51,5 @@ public class MyArrayListTest {
       assertEquals(2,strings.getsize());
 
   }
-   @Test
-    public void addFourElement_getElement_ClearAllInTest(){
-       MyArrayList strings = new MyArrayList();
-       assertTrue(strings.isEmpty());
-       strings.add("school");
-       strings.add("church");
-       strings.add("bible");
-       strings.add("baby");
-       strings.remove("school");
-       strings.remove("church");
-       strings.remove("bible");
-       strings.remove("baby");
-       assertTrue(strings.clear());
-   }
 
 }

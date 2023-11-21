@@ -11,9 +11,7 @@ public class ArrayListTest {
     @Test
     public void TestThatArrayList_IsEmpty() {
         ArrayList myList = new ArrayList();
-        System.out.println(myList.isEmpty());
-//              myList.add(10);
-//        assertTrue(myList.isEmpty());
+        assertTrue(myList.isEmpty());
     }
 
     @Test
@@ -32,7 +30,6 @@ public class ArrayListTest {
         ArrayList myList = new ArrayList();
         myList.add(10);
         myList.add(50);
-//        System.out.println(myList.remove(10));
         assertTrue(myList.remove(10));
 
 

@@ -7,19 +7,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class AccountTest {
+
+
     private Account account;
     @BeforeEach
+    void setUp(){
+        account = new Account(1234,"Account name","pin");
+    }
 
     @Test
     public void deposit1k_balanceIs1kTest(){
-        Account account = new Account("Account number","Account name","pin");
         account.deposit(1000);
         assertEquals(1000,account.checkBalance("pin"));
     }
 
     @Test
     public void deposit1k_deposit2k_balanceIs3kTest(){
-        Account account = new Account("Account number","Account name","pin");
         account.deposit(1000);
         account.deposit(2000);
         assertEquals(3000,account.checkBalance("pin"));
@@ -27,12 +30,13 @@ public class AccountTest {
 
 @Test
     public void wrongPin_inCheckBalance_throwsException(){
-        assertThrows(WrongPinException.class,() ->account.checkBalance("pin"));
+        assertThrows(WrongPinException.class,() ->account.checkBalance("correct pin"));
 }
 
 @Test
     public void correctPin_returnsBalanceTest(){
-        assertEquals(0,account.checkBalance("correct pin"));
+        account.deposit(3000);
+        assertEquals(3000,account.checkBalance("pin"));
 }
 
  @Test
@@ -43,8 +47,8 @@ public class AccountTest {
   @Test
     public void deposit1k_withdraw5h_balanceIs5hTest(){
         account.deposit(1000);
-        account.withdraw(500,"correct pin");
-        assertEquals(500,account.checkBalance("correct pin"));
+        account.withdraw(500,"pin");
+        assertEquals(500,account.checkBalance("pin"));
   }
    @Test
     public void deposit1k_withdraw5hWithWrongPin_throwTest(){
@@ -52,4 +56,7 @@ public class AccountTest {
         assertThrows(WrongPinException.class,()-> account.withdraw(-30,"correct pin"));
 
    }
+
+
+
 }

@@ -7,34 +7,40 @@ public class Account {
     private String pin;
     private  int accountNumber;
 
-    public Account(String accountNumber, String accountName, String pin) {
+    public Account(int accountNumber, String accountName, String pin) {
         this .pin = pin;
+        this.accountNumber = accountNumber;
+        name = accountName;
     }
 
 
     public void deposit(int amount){
         validate(amount);
-        balance = +amount;
+        balance += amount;
 
   }
   public void withdraw(int amount,String pin){
-//  validate(pin);
+  validate(pin);
   validate(amount);
   checksufficientFundsWith(amount);
-  balance -= balance;
+  balance -= amount;
   }
 
+    private void validate(String pin) {
+     if (!this.pin.equals(pin))throw new WrongPinException("Incorrect pin");
+    }
+
     private void checksufficientFundsWith(int amount) {
-//  if (amount > balance)
+  if (amount > balance)throw new IllegalArgumentException("Insufficient funds");
     }
 
     public int checkBalance(String pin){
-//        validate(pin);
+        validate(pin);
       return balance;
   }
 
     private void validate(int amount) {
-    if (amount < 0)throw new InvalidAmountException(String.format("%s is an invalid amount"));
+    if (amount < 0)throw new InvalidAmountException("%s is an invalid amount");
     }
 
 }

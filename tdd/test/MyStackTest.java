@@ -97,6 +97,6 @@ public class MyStackTest {
        stack.add("ada");
        stack.add("family");
 
-       assertThrows()
+//       assertThrows()
    }
 }

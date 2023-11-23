@@ -1,10 +1,11 @@
 package BankApplication;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
     private String name;
-    private List <Account> accounts;
+    private List <Account> accounts = new ArrayList<>();
 
     public void deposit(int balance,int accountNumber){
 
@@ -21,4 +22,10 @@ public class Bank {
     public Account registerCustomer(String name,String pin) {
         return null;
     }
+   public void removeAccount(int accountNumber,String name){
+
+   }
+   public Account  findAccount(int account){
+        return null;
+   }
 }

@@ -21,7 +21,7 @@ public class SavingAccount {
     }
 
     public double monthlyyInterestRate() {
-        savingsBalance = (savingsBalance * annualInterestRate) / 12;
+        savingsBalance += (savingsBalance * annualInterestRate) / 12;
         return savingsBalance;
     }
 

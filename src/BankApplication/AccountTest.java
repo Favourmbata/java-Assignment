@@ -12,7 +12,7 @@ public class AccountTest {
     private Account account;
     @BeforeEach
     void setUp(){
-        account = new Account(1234,"Account name","pin");
+        account = new Account("1234","Account name","pin");
     }
 
     @Test
